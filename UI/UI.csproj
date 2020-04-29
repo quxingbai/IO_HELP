@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B840F0DB-315D-42AB-90BB-5F3C69FE2FF6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADDFiles_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADDFiles_Form.Designer.cs">
+      <DependentUpon>ADDFiles_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageForms\GetAllFiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageForms\GetAllFiles.Designer.cs">
+      <DependentUpon>GetAllFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageForms\MainImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageForms\MainImageForm.Designer.cs">
+      <DependentUpon>MainImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageForms\SelectImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageForms\SelectImageForm.Designer.cs">
+      <DependentUpon>SelectImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenSet.Designer.cs">
+      <DependentUpon>ScreenSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service_Form.Designer.cs">
+      <DependentUpon>Service_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Super_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Super_Form.Designer.cs">
+      <DependentUpon>Super_Form.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ADDFiles_Form.resx">
+      <DependentUpon>ADDFiles_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageForms\GetAllFiles.resx">
+      <DependentUpon>GetAllFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageForms\MainImageForm.resx">
+      <DependentUpon>MainImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageForms\SelectImageForm.resx">
+      <DependentUpon>SelectImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ScreenSet.resx">
+      <DependentUpon>ScreenSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service_Form.resx">
+      <DependentUpon>Service_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Super_Form.resx">
+      <DependentUpon>Super_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{02d6e66b-3e8c-45d8-b585-61bc224509d4}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITEM\ITEM.csproj">
+      <Project>{b75f3b57-208d-4fd0-aa1a-a5c12f297939}</Project>
+      <Name>ITEM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MODLE\MODLE.csproj">
+      <Project>{d1c5c364-7e1f-4273-9fb0-79f71b67166e}</Project>
+      <Name>MODLE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MODS\MODS.csproj">
+      <Project>{543cd00a-f3b9-4b70-9f06-c2cb8b75f791}</Project>
+      <Name>MODS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B75F3B57-208D-4FD0-AA1A-A5C12F297939}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITEM</RootNamespace>
+    <AssemblyName>ITEM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FileItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IO_Help.cs" />
+    <Compile Include="ItemBox.cs" />
+    <Compile Include="MainImageFormItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Opens\AddMainImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opens\AddMainImageForm.Designer.cs">
+      <DependentUpon>AddMainImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opens\DataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opens\DataForm.Designer.cs">
+      <DependentUpon>DataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opens\ImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opens\ImageForm.Designer.cs">
+      <DependentUpon>ImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opens\LoadsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opens\LoadsForm.Designer.cs">
+      <DependentUpon>LoadsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opens\SaveFilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opens\SaveFilesForm.Designer.cs">
+      <DependentUpon>SaveFilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opens\SuperForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opens\SuperForm.Designer.cs">
+      <DependentUpon>SuperForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opens\To_Help.cs" />
+    <Compile Include="ProgressBarItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SuperItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextBoxItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{02d6e66b-3e8c-45d8-b585-61bc224509d4}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MODLE\MODLE.csproj">
+      <Project>{d1c5c364-7e1f-4273-9fb0-79f71b67166e}</Project>
+      <Name>MODLE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SETTING\SETTING.csproj">
+      <Project>{0bf4a15c-8719-43d7-8d7f-723ece6de4f9}</Project>
+      <Name>SETTING</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Opens\AddMainImageForm.resx">
+      <DependentUpon>AddMainImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opens\DataForm.resx">
+      <DependentUpon>DataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opens\ImageForm.resx">
+      <DependentUpon>ImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opens\LoadsForm.resx">
+      <DependentUpon>LoadsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opens\SaveFilesForm.resx">
+      <DependentUpon>SaveFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opens\SuperForm.resx">
+      <DependentUpon>SuperForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBarItem.resx">
+      <DependentUpon>ProgressBarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBoxItem.resx">
+      <DependentUpon>TextBoxItem.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
